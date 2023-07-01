@@ -1,0 +1,21 @@
+[core]
+	editor = code --wait
+	excludesfile = ~/.gitignore_global
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	allowedSignersFile = /Users/taliesin/.ssh/allowed_signers
+[commit]
+	gpgsign = true
+[user]
+	name = Taliesin Millhouse
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDmt3HFUz2y3g3Mi+8KcZ5lUraw1a9cGKxefjvXi3mDN
+[init]
+	defaultBranch = main
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[includeIf "gitdir:~/Developer/personal/"]
+    path = ~/Developer/personal/.gitconfig
+[includeIf "gitdir:~/Developer/work/"]
+    path = ~/Developer/work/.gitconfig
