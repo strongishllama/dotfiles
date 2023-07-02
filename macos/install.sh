@@ -28,3 +28,6 @@ ln -sf $BASE_URL/ssh/config ~/.ssh/config
 
 # Create 1Password symlinks.
 ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" ~/.config/1Password/ssh/agent.toml
+
+# Install software.
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
