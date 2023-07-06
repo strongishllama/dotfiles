@@ -29,6 +29,7 @@ if [ "$1" == "work" ]; then
     ln -sf "$BASE_URL/git/.gitconfig.work" "$HOME/Developer/work/.gitconfig"
 fi
 ln -sf "$BASE_URL/git/.gitignore_global" "$HOME/.gitignore_global"
+ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
 
 # Create SSH symlinks.
 ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
@@ -40,4 +41,5 @@ ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" "$HOME/.config/1Password/ssh/agen
 crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id.sh"; } | crontab -
 
 # Install software.
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle --file="$BASE_URL/homebrew/Brewfile"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
