@@ -1282,6 +1282,8 @@
 	</array>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>StatusBarIcon</key>
+	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>4</integer>
 	<key>VisualIndicatorForEsc</key>
