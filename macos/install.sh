@@ -43,3 +43,5 @@ crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id
 # Install software.
 brew bundle --file="$BASE_URL/homebrew/Brewfile"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc

@@ -1,11 +1,14 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "romkatv/powerlevel10k"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Mac App Store command-line interface
 brew "mas"
 # CLI tool that moves files or folder to the trash
 brew "trash"
+# A Zsh Theme
+brew "romkatv/powerlevel10k/powerlevel10k"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Terminal emulator as alternative to Apple's Terminal app
