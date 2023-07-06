@@ -7,16 +7,18 @@ fi
 
 echo "Installing $1 configuration files..."
 
-BASE_URL=$HOME/Developer/personal/repositories/dotfiles/macos
+BASE_URL="$(pwd)"
 
 # Create directories.
-mkdir -p ~/Developer/personal
+mkdir -p "$HOME/.ssh"
+mkdir -p "$HOME/.config/1Password/ssh"
+mkdir -p "$HOME/Developer/personal"
 if [ "$1" == "work" ]; then
-    mkdir -p ~/Developer/work
+    mkdir -p "$HOME/Developer/work"
 fi
 
 # Create script symlinks.
-trash "$HOME/scripts"
+rm -rf "$HOME/scripts" || true
 ln -sf "$BASE_URL/scripts" "$HOME/scripts"
 "$HOME/scripts/enable-sudo-touch-id.sh"
 
@@ -38,4 +40,4 @@ ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" "$HOME/.config/1Password/ssh/agen
 crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id.sh"; } | crontab -
 
 # Install software.
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
