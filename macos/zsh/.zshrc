@@ -14,6 +14,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# Brew completion.
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -101,3 +109,13 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Custom user config.
+eval "$(mcfly init zsh)"
+eval $(thefuck --alias)
+
+alias bcat='bat --paging=never'
+alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
+alias ghpr="gh pr create --draft --assignee @me"
+alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
+alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"

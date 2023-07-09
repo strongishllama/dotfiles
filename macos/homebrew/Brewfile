@@ -1,18 +1,43 @@
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "romkatv/powerlevel10k"
+# Static checker for GitHub Actions workflow files
+brew "actionlint"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Prevent cloud misconfigurations during build-time for IaC tools
+brew "checkov"
+# GitHub command-line tool
+brew "gh"
+# Audit git repos for secrets
+brew "gitleaks"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
 # Mac App Store command-line interface
 brew "mas"
+# Fly through your shell history
+brew "mcfly"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Programmatically correct mistyped console commands
+brew "thefuck"
 # CLI tool that moves files or folder to the trash
 brew "trash"
+# Internet file retriever
+brew "wget"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# Free monospaced font with programming ligatures
+cask "font-fira-code"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Move and resize windows using keyboard shortcuts or snap areas
