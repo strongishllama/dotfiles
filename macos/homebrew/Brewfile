@@ -16,14 +16,28 @@ brew "gitleaks"
 brew "go"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
 # Mac App Store command-line interface
 brew "mas"
 # Fly through your shell history
 brew "mcfly"
+# Manage multiple Node.js versions
+brew "nvm"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Tool to generate documentation from Terraform modules
+brew "terraform-docs"
+# Terraform version manager inspired by rbenv
+brew "tfenv"
+# Linter for Terraform files
+brew "tflint"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # CLI tool that moves files or folder to the trash
