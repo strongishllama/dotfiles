@@ -116,11 +116,17 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
 # Custom user config.
+alias bcat='bat --paging=never'
+alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
+alias ghpr="gh pr create --draft --assignee @me"
+alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
+alias kc="kubectl"
+alias kctx="kubectx"
+alias kns="kubens"
+alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
+alias tf="terraform"
+
 eval "$(mcfly init zsh)"
 eval $(thefuck --alias)
 
-alias bcat='bat --paging=never'
-alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
-alias ghpr="gh pr create --draft --assignee @me"
-alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
-alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
+export PATH="$HOME/bin:$PATH"

@@ -10,6 +10,7 @@ echo "Installing $1 configuration files..."
 BASE_URL="$(pwd)"
 
 # Create directories.
+mkdir -p "$HOME/bin"
 mkdir -p "$HOME/.nvm"
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.config/1Password/ssh"
