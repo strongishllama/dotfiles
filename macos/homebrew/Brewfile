@@ -50,6 +50,8 @@ brew "romkatv/powerlevel10k/powerlevel10k"
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Terminal emulator as alternative to Apple's Terminal app
