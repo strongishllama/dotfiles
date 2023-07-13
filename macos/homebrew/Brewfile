@@ -18,6 +18,8 @@ brew "go"
 brew "hadolint"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Run local Kubernetes cluster in Docker
+brew "kind"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
@@ -69,7 +71,6 @@ mas "Tailscale", id: 1475387142
 mas "Xcode", id: 497799835
 vscode "albert.TabOut"
 vscode "charliermarsh.ruff"
-vscode "Dagger.dagger"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "GitHub.copilot"
@@ -98,7 +99,5 @@ vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "timonwong.shellcheck"
-vscode "Vue.volar"
-vscode "Vue.vscode-typescript-vue-plugin"
 vscode "waderyan.gitblame"
 vscode "zxh404.vscode-proto3"
