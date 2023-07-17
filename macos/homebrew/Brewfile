@@ -56,8 +56,12 @@ cask "1password-cli"
 cask "docker"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
+# Free and open-source image editor
+cask "gimp"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Open-source code editor
