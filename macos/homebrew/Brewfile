@@ -8,6 +8,8 @@ brew "actionlint"
 brew "bat"
 # Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # GitHub command-line tool
 brew "gh"
 # Audit git repos for secrets
