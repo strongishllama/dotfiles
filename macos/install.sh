@@ -14,6 +14,7 @@ mkdir -p "$HOME/bin"
 mkdir -p "$HOME/.nvm"
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.config/1Password/ssh"
+mkdir -p "$HOME/.config/nvim"
 mkdir -p "$HOME/Developer/personal"
 if [ "$1" == "work" ]; then
     mkdir -p "$HOME/Developer/work"
@@ -38,6 +39,9 @@ ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
 
 # Create 1Password symlinks.
 ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" "$HOME/.config/1Password/ssh/agent.toml"
+
+# Create Neovim symlinks.
+ln -sf "$BASE_URL/nvim" "$HOME/.config/nvim"
 
 # Add Cronjobs.
 crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id.sh"; } | crontab -

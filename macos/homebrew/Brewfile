@@ -28,6 +28,8 @@ brew "kubectx"
 brew "mas"
 # Fly through your shell history
 brew "mcfly"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
 # Framework for managing multi-language pre-commit hooks
