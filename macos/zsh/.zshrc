@@ -126,6 +126,7 @@ alias kctx="kubectx"
 alias kns="kubens"
 alias nv="nvim"
 alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
 
 eval "$(mcfly init zsh)"

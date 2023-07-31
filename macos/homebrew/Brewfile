@@ -8,8 +8,8 @@ brew "actionlint"
 brew "bat"
 # Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
-# Cloudflare Tunnel client (formerly Argo Tunnel)
-brew "cloudflared"
+# Debugger for the Go programming language
+brew "delve"
 # GitHub command-line tool
 brew "gh"
 # Audit git repos for secrets
@@ -107,6 +107,5 @@ vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "timonwong.shellcheck"
-vscode "vscodevim.vim"
 vscode "waderyan.gitblame"
 vscode "zxh404.vscode-proto3"

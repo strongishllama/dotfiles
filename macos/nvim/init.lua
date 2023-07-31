@@ -106,6 +106,21 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- [[ KEYMAPS ]]
+
+-- Debugging
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F10>", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+require('dap-go').setup()
+require('dapui').setup()
+require("nvim-dap-virtual-text").setup({
+  enable_commands = true,
+})
+require('telescope').load_extension('dap')
+
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
@@ -138,6 +153,11 @@ require('telescope').setup {
       },
     },
   },
+  pickers = {
+    find_files = {
+      hidden = true
+    }
+  }
 }
 
 -- Enable telescope fzf native, if installed

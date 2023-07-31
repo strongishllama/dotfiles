@@ -1,4 +1,11 @@
 return {
+  -- Debugging related plugins
+  'mfussenegger/nvim-dap',
+  'rcarriga/nvim-dap-ui',
+  'leoluz/nvim-dap-go',
+  'theHamsta/nvim-dap-virtual-text',
+  'nvim-telescope/telescope-dap.nvim',
+
   -- NOTE: First, some plugins that don't require any configuration
 
   -- Git related plugins
