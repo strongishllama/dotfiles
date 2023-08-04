@@ -32,6 +32,8 @@ if [ "$1" == "work" ]; then
     ln -sf "$BASE_URL/git/.gitconfig.work" "$HOME/Developer/work/.gitconfig"
 fi
 ln -sf "$BASE_URL/git/.gitignore_global" "$HOME/.gitignore_global"
+ln -sf "$BASE_URL/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+ln -sf "$BASE_URL/zsh/.zprofile" "$HOME/.zprofile"
 ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
 
 # Create SSH symlinks.
