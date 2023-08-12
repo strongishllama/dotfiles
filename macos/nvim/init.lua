@@ -106,7 +106,12 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
--- [[ KEYMAPS ]]
+-- LSP
+require('lspconfig').gopls.setup({
+  on_attach = function()
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, {buffer=0})
+  end
+})
 
 -- Debugging
 vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
