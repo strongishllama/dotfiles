@@ -26,6 +26,8 @@ brew "kind"
 brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Make/rake-like build tool using Go
+brew "mage"
 # Mac App Store command-line interface
 brew "mas"
 # Fly through your shell history
@@ -34,8 +36,12 @@ brew "mcfly"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Tool for creating isolated virtual python environments
+brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Emulator for x86 and PowerPC
+brew "qemu"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Tool to generate documentation from Terraform modules
