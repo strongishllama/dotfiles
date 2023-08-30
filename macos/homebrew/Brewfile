@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "minio/stable"
 tap "romkatv/powerlevel10k"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
@@ -8,18 +10,42 @@ brew "actionlint"
 brew "bat"
 # Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
+# Cross-platform make
+brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Debugger for the Go programming language
 brew "delve"
+# Text processing system for reStructuredText
+brew "docutils"
+# Debian package management system
+brew "dpkg"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
 # GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # Audit git repos for secrets
 brew "gitleaks"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Library access to GnuPG
+brew "gpgme"
+# Image processing tools collection
+brew "graphicsmagick"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Free Kerberos 5 implementation
+brew "heimdal"
 # Configurable static site generator
 brew "hugo"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Run local Kubernetes cluster in Docker
@@ -28,6 +54,10 @@ brew "kind"
 brew "kubernetes-cli"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Conversion library
+brew "libiconv"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Make/rake-like build tool using Go
 brew "mage"
 # Mac App Store command-line interface
@@ -38,12 +68,26 @@ brew "mcfly"
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Object-relational database system
+brew "postgresql@13"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Emulator for x86 and PowerPC
 brew "qemu"
+# Ruby version manager
+brew "rbenv"
+# Alternative to backtracking PCRE-style regular expression engines
+brew "re2"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Collection of tools for managing UNIX services
+brew "runit"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Tool to generate documentation from Terraform modules
@@ -56,16 +100,30 @@ brew "tflint"
 brew "thefuck"
 # CLI tool that moves files or folder to the trash
 brew "trash"
+# Secures, stores, and tightly controls access to secrets
+brew "vault"
 # Internet file retriever
 brew "wget"
+# Linter for YAML files
+brew "yamllint"
+# JavaScript package manager
+brew "yarn"
+# High Performance Object Storage compatible with Amazon S3 API
+brew "minio/stable/minio"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# Automated testing of webapps for Google Chrome
+cask "chromedriver"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Open source container development tool
+cask "finch"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Free and open-source image editor
@@ -82,6 +140,8 @@ cask "rectangle"
 cask "slack"
 # Open-source code editor
 cask "visual-studio-code"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -90,6 +150,7 @@ mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
 mas "Xcode", id: 497799835
 vscode "albert.TabOut"
+vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
@@ -119,5 +180,6 @@ vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "timonwong.shellcheck"
+vscode "Vue.volar"
 vscode "waderyan.gitblame"
 vscode "zxh404.vscode-proto3"
