@@ -18,3 +18,5 @@
     path = ~/Developer/personal/.gitconfig
 [includeIf "gitdir:~/Developer/work/"]
     path = ~/Developer/work/.gitconfig
+[push]
+	autoSetupRemote = true
