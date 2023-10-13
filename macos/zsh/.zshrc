@@ -121,6 +121,9 @@ eval "$(rbenv init - zsh)"
 # postgresql config.
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
 
+# golang config.
+export PATH="$HOME/go/bin:$PATH"
+
 # Custom user config.
 alias bcat='bat --paging=never'
 alias cf='cloudflared'

@@ -1,11 +1,14 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "minio/stable"
 tap "romkatv/powerlevel10k"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
+# Text processing system for reStructuredText
+brew "docutils"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Prevent cloud misconfigurations during build-time for IaC tools
@@ -16,8 +19,6 @@ brew "cmake"
 brew "coreutils"
 # Debugger for the Go programming language
 brew "delve"
-# Text processing system for reStructuredText
-brew "docutils"
 # Debian package management system
 brew "dpkg"
 # Perl lib for reading and writing EXIF metadata
@@ -34,6 +35,8 @@ brew "gitleaks"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Fast linters runner for Go
+brew "golangci-lint"
 # Library access to GnuPG
 brew "gpgme"
 # Image processing tools collection
@@ -74,6 +77,8 @@ brew "openssl@1.1"
 brew "pkg-config"
 # Object-relational database system
 brew "postgresql@13"
+# Theme for zsh
+brew "powerlevel10k"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Framework for managing multi-language pre-commit hooks
@@ -110,11 +115,9 @@ brew "yamllint"
 brew "yarn"
 # High Performance Object Storage compatible with Amazon S3 API
 brew "minio/stable/minio"
-# A Zsh Theme
-brew "romkatv/powerlevel10k/powerlevel10k"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
@@ -128,10 +131,14 @@ cask "finch"
 cask "font-fira-code"
 # Free and open-source image editor
 cask "gimp"
+# Game development engine
+cask "godot"
 # Web browser
 cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -155,12 +162,14 @@ vscode "charliermarsh.ruff"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "GitHub.github-vscode-theme"
 vscode "github.vscode-github-actions"
 vscode "gitpod.gitpod-desktop"
 vscode "golang.go"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
+vscode "jinliming2.vscode-go-template"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
@@ -179,6 +188,7 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "redhat.vscode-yaml"
 vscode "streetsidesoftware.code-spell-checker"
+vscode "tamasfe.even-better-toml"
 vscode "timonwong.shellcheck"
 vscode "Vue.volar"
 vscode "waderyan.gitblame"
