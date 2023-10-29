@@ -9,6 +9,8 @@ brew "actionlint"
 brew "docutils"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# C library implementing the SSH2 protocol
+brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Prevent cloud misconfigurations during build-time for IaC tools
@@ -59,8 +61,6 @@ brew "kubernetes-cli"
 brew "kubectx"
 # Conversion library
 brew "libiconv"
-# C library implementing the SSH2 protocol
-brew "libssh2"
 # Make/rake-like build tool using Go
 brew "mage"
 # Mac App Store command-line interface
@@ -95,6 +95,8 @@ brew "redis"
 brew "runit"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Traceroute implementation using TCP packets
+brew "tcptraceroute"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Terraform version manager inspired by rbenv
