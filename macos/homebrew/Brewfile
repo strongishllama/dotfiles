@@ -95,8 +95,6 @@ brew "redis"
 brew "runit"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Traceroute implementation using TCP packets
-brew "tcptraceroute"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Terraform version manager inspired by rbenv
