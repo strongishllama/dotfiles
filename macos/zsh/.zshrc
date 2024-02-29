@@ -124,6 +124,9 @@ export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
 # golang config.
 export PATH="$HOME/go/bin:$PATH"
 
+# terragrunt config.
+export PATH="$HOME/.tgenv/bin:$PATH"
+
 # Custom user config.
 alias bcat='bat --paging=never'
 alias cf='cloudflared'
@@ -137,6 +140,7 @@ alias nv="nvim"
 alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
+alias tg="terragrunt"
 
 eval "$(mcfly init zsh)"
 eval $(thefuck --alias)
