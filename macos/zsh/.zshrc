@@ -79,7 +79,7 @@ fi
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # User configuration
 
@@ -146,4 +146,3 @@ eval "$(mcfly init zsh)"
 eval $(thefuck --alias)
 
 export PATH="$HOME/bin:$PATH"
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
