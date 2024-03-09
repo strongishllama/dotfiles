@@ -127,6 +127,9 @@ export PATH="$HOME/go/bin:$PATH"
 # terragrunt config.
 export PATH="$HOME/.tgenv/bin:$PATH"
 
+# homebrew config.
+export PATH=/opt/homebrew/bin:$PATH
+
 # Custom user config.
 alias bcat='bat --paging=never'
 alias cf='cloudflared'

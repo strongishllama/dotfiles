@@ -52,5 +52,3 @@ crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id
 brew bundle --file="$BASE_URL/homebrew/Brewfile"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv
-
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc

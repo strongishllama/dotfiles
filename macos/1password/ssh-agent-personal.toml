@@ -1,7 +1,7 @@
 [[ssh-keys]]
-item = "GitHub Authentication Personal"
+item = "Authentication Personal"
 vault = "Private"
 
 [[ssh-keys]]
-item = "GitHub Signing Personal"
+item = "Signing Personal"
 vault = "Private"

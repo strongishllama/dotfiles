@@ -1,11 +1,13 @@
 [[ssh-keys]]
-item = "GitHub Authentication Work"
+item = "Authentication Work"
 vault = "Private"
+account = "gitlab"
 
 [[ssh-keys]]
-item = "GitHub Signing Work"
+item = "Signing Work"
 vault = "Private"
+account = "gitlab"
 
 [[ssh-keys]]
-item = "GitHub Signing Personal"
+item = "Signing Personal"
 vault = "Private"
