@@ -14,9 +14,9 @@
 	defaultBranch = main
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[includeIf "gitdir:~/Developer/personal/"]
+[includeIf "gitdir:~/Developer/personal/**"]
     path = ~/Developer/personal/.gitconfig
-[includeIf "gitdir:~/Developer/work/"]
+[includeIf "gitdir:~/Developer/work/**"]
     path = ~/Developer/work/.gitconfig
 [push]
 	autoSetupRemote = true
