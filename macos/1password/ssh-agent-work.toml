@@ -9,5 +9,9 @@ vault = "Private"
 account = "gitlab"
 
 [[ssh-keys]]
+item = "Authentication Personal"
+vault = "Private"
+
+[[ssh-keys]]
 item = "Signing Personal"
 vault = "Private"

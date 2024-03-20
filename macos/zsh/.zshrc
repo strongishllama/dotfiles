@@ -131,10 +131,12 @@ export PATH="$HOME/.tgenv/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
 # Custom user config.
-alias bcat='bat --paging=never'
-alias cf='cloudflared'
+alias bcat="bat --paging=never"
+alias cf="cloudflared"
 alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
 alias ghpr="gh pr create --draft --assignee @me"
+alias gl="glab"
+alias glmr="glab mr create --assignee @me --draft --fill --push --remove-source-branch"
 alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
 alias kc="kubectl"
 alias kctx="kubectx"
