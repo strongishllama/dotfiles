@@ -25,6 +25,8 @@ brew "docutils"
 brew "dpkg"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -51,6 +53,8 @@ brew "graphicsmagick"
 brew "hadolint"
 # Free Kerberos 5 implementation
 brew "heimdal"
+# Kubernetes package manager
+brew "helm"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie", link: false
 # Configurable static site generator
@@ -71,18 +75,16 @@ brew "libiconv"
 brew "mage"
 # Mac App Store command-line interface
 brew "mas"
-# Fly through your shell history
-brew "mcfly"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# OpenBSD freely-licensed SSH connectivity tools
+brew "openssh"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
 # Manage compile and link flags for libraries
 brew "pkg-config"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Tool for managing OCI containers and pods
 brew "podman"
 # Object-relational database system
@@ -91,6 +93,8 @@ brew "postgresql@13"
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Ruby version manager
@@ -129,6 +133,8 @@ brew "minio/stable/minio"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# All-in-one installer for the tools you need to manage your Chef infrastructure
+cask "chef-workstation"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
 # Voice and text chat software
@@ -143,6 +149,8 @@ cask "font-fira-code"
 cask "gimp"
 # Game development engine
 cask "godot"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
 # Testing client for REST, GraphQL, and HTTP APIs
 cask "httpie"
 # Terminal emulator as alternative to Apple's Terminal app

@@ -1,7 +1,16 @@
 #!/bin/bash
 
-REBASED_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-export REBASED_BRANCH
-git checkout main
-git branch --delete "$REBASED_BRANCH"
+MAIN_BRANCH="unknown"
+if [ "$(git rev-parse --verify main 2>/dev/null)" ]; then
+    MAIN_BRANCH="main"
+elif [ "$(git rev-parse --verify master 2>/dev/null)" ]; then
+    MAIN_BRANCH="master"
+else
+    echo "Unable to determine main branch name"
+    exit 1
+fi
+
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+git checkout "$MAIN_BRANCH"
+git branch --delete "$CURRENT_BRANCH"
 git pull

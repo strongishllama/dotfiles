@@ -110,6 +110,9 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# homebrew config.
+export PATH=/opt/homebrew/bin:$PATH
+
 # nvm config.
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
@@ -127,8 +130,15 @@ export PATH="$HOME/go/bin:$PATH"
 # terragrunt config.
 export PATH="$HOME/.tgenv/bin:$PATH"
 
-# homebrew config.
-export PATH=/opt/homebrew/bin:$PATH
+# gcloud config,
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+#1password config.
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
+# asdf config.
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Custom user config.
 alias bcat="bat --paging=never"
@@ -147,7 +157,7 @@ alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
 alias tg="terragrunt"
 
-eval "$(mcfly init zsh)"
+eval "$(fzf --zsh)"
 eval $(thefuck --alias)
 
 export PATH="$HOME/bin:$PATH"
