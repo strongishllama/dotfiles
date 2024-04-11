@@ -1,3 +1,4 @@
+tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
@@ -17,8 +18,14 @@ brew "checkov"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Debugger for the Go programming language
 brew "delve"
+# Diff that understands syntax
+brew "difftastic"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Text processing system for reStructuredText
 brew "docutils"
 # Debian package management system
@@ -39,8 +46,6 @@ brew "gitleaks"
 brew "glab"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Fast linters runner for Go
 brew "golangci-lint"
 # Library access to GnuPG
@@ -73,8 +78,12 @@ brew "kubectx"
 brew "libiconv"
 # Make/rake-like build tool using Go
 brew "mage"
+# Web and API based SMTP testing tool
+brew "mailhog"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
@@ -95,30 +104,24 @@ brew "powerlevel10k"
 brew "pre-commit"
 # Generic machine emulator and virtualizer
 brew "qemu"
-# Install various Ruby versions and implementations
-brew "ruby-build"
-# Ruby version manager
-brew "rbenv"
 # Alternative to backtracking PCRE-style regular expression engines
 brew "re2"
 # Persistent key-value database, with built-in net interface
 brew "redis"
+# Install various Ruby versions and implementations
+brew "ruby-build"
 # Collection of tools for managing UNIX services
 brew "runit"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
-# Terraform version manager inspired by rbenv
-brew "tfenv"
 # Linter for Terraform files
 brew "tflint"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # CLI tool that moves files or folder to the trash
 brew "trash"
-# Secures, stores, and tightly controls access to secrets
-brew "vault"
 # Tool for creating isolated virtual python environments
 brew "virtualenv"
 # Internet file retriever
@@ -127,12 +130,16 @@ brew "wget"
 brew "yamllint"
 # JavaScript package manager
 brew "yarn"
+# Vault
+brew "hashicorp/tap/vault"
 # High Performance Object Storage compatible with Amazon S3 API
 brew "minio/stable/minio"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# Chromium based browser
+cask "arc"
 # All-in-one installer for the tools you need to manage your Chef infrastructure
 cask "chef-workstation"
 # Automated testing of webapps for Google Chrome
@@ -157,6 +164,12 @@ cask "httpie"
 cask "iterm2"
 # ZSA keyboard firmware flasher
 cask "keymapp"
+# Kubernetes IDE
+cask "lens"
+# Software for Logitech devices
+cask "logi-options-plus"
+# Optimise your webcam, headset, and Logi Dock for video meetings
+cask "logitune"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Open-source software for live streaming and screen recording
@@ -173,6 +186,7 @@ cask "rectangle"
 cask "visual-studio-code"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Clocker", id: 1056643111
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
@@ -192,6 +206,7 @@ vscode "github.vscode-github-actions"
 vscode "gitlab.gitlab-workflow"
 vscode "gitpod.gitpod-desktop"
 vscode "golang.go"
+vscode "grafana.vscode-jsonnet"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "jinliming2.vscode-go-template"

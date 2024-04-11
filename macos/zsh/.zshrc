@@ -113,13 +113,16 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # homebrew config.
 export PATH=/opt/homebrew/bin:$PATH
 
+# mise config.
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+
+# direnv config.
+eval "$(direnv hook zsh)"
+
 # nvm config.
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-# rbenv config.
-eval "$(rbenv init - zsh)"
 
 # postgresql config.
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
@@ -136,9 +139,6 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 #1password config.
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
-
-# asdf config.
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # Custom user config.
 alias bcat="bat --paging=never"
