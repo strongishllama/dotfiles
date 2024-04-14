@@ -76,7 +76,9 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
@@ -110,37 +112,37 @@ source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# homebrew config.
+# homebrew config
 export PATH=/opt/homebrew/bin:$PATH
 
-# mise config.
+# mise config
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
-# direnv config.
+# direnv config
 eval "$(direnv hook zsh)"
 
-# nvm config.
+# nvm config
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 
-# postgresql config.
+# postgresql config
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
 
-# golang config.
+# golang config
 export PATH="$HOME/go/bin:$PATH"
 
-# terragrunt config.
+# terragrunt config
 export PATH="$HOME/.tgenv/bin:$PATH"
 
-# gcloud config,
+# gcloud config
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
-#1password config.
+# 1password config
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
-# Custom user config.
+# Custom user config
 alias bcat="bat --paging=never"
 alias cf="cloudflared"
 alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
