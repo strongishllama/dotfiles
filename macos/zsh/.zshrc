@@ -145,13 +145,6 @@ export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agen
 # Custom user config
 alias bcat="bat --paging=never"
 alias cf="cloudflared"
-alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
-alias gco="bash \"$HOME/scripts/git-checkout.sh\""
-alias gbd="bash \"$HOME/scripts/git-delete-branch.sh\""
-alias ghpr="gh pr create --draft --assignee @me"
-alias gl="glab"
-alias glmr="glab mr create --assignee @me --draft --fill --push --remove-source-branch"
-alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
 alias kc="kubectl"
 alias kctx="kubectx"
 alias kns="kubens"
@@ -160,6 +153,15 @@ alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
 alias tg="terragrunt"
+
+# git/gitlab/github config
+alias gbd="bash \"$HOME/scripts/git-branch-delete.sh\""
+alias gcmdb="bash \"$HOME/scripts/git-checkout-main-delete-branch.sh\""
+alias gco="bash \"$HOME/scripts/git-checkout.sh\""
+alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
+alias gstu="git status --untracked-files"
+alias ghpr="gh pr create --draft --assignee @me"
+alias glmr="glab mr create --assignee @me --fill --push --remove-source-branch"
 
 eval "$(fzf --zsh)"
 eval $(thefuck --alias)

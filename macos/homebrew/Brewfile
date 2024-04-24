@@ -154,8 +154,6 @@ cask "finch"
 cask "font-fira-code"
 # Free and open-source image editor
 cask "gimp"
-# Game development engine
-cask "godot"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # Testing client for REST, GraphQL, and HTTP APIs
@@ -184,6 +182,8 @@ cask "raspberry-pi-imager"
 cask "rectangle"
 # Open-source code editor
 cask "visual-studio-code"
+# Multiplayer code editor
+cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Clocker", id: 1056643111

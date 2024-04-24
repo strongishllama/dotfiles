@@ -12,19 +12,20 @@ fzf-git-branch() {
         sed "s/.* //"
 }
 
-git rev-parse HEAD > /dev/null 2>&1 || return
+git rev-parse HEAD > /dev/null 2>&1 || exit 1
 
-branch=$(fzf-git-branch)
-if [[ "$branch" = "" ]]; then
+BRANCH=""
+BRANCH=$(fzf-git-branch)
+if [[ "$BRANCH" = "" ]]; then
     echo "No branch selected."
-    return
+    exit 1
 fi
 
 # If branch name starts with 'remotes/' then it is a remote branch. By
 # using --track and a remote branch name, it is the same as:
 # git checkout -b branchName --track origin/branchName
-if [[ "$branch" = 'remotes/'* ]]; then
-    git checkout --track "$branch"
+if [[ "$BRANCH" = 'remotes/'* ]]; then
+    git checkout --track "$BRANCH"
 else
-    git checkout "$branch";
+    git checkout "$BRANCH";
 fi

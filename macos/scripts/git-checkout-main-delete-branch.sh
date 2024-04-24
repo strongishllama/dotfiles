@@ -13,4 +13,5 @@ fi
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 git checkout "$MAIN_BRANCH"
 git branch --delete "$CURRENT_BRANCH"
+git remote update origin --prune
 git pull

@@ -12,10 +12,12 @@ fzf-git-branch() {
 
 git rev-parse HEAD > /dev/null 2>&1 || return
 
-branch=$(fzf-git-branch)
-if [[ "$branch" = "" ]]; then
+BRANCH=""
+BRANCH=$(fzf-git-branch)
+if [[ "$BRANCH" = "" ]]; then
     echo "No branch selected."
-    return
+    exit 1
 fi
 
-git branch -d "$branch";
+git branch --delete "$BRANCH";
+git remote update origin --prune
