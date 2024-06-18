@@ -1,22 +1,8 @@
 [[ssh-keys]]
-item = "Chef"
+item = "Work"
 vault = "Private"
 account = "gitlab"
 
 [[ssh-keys]]
-item = "GitLab"
-vault = "Private"
-account = "gitlab"
-
-[[ssh-keys]]
-item = "Git Signing"
-vault = "Private"
-account = "gitlab"
-
-[[ssh-keys]]
-item = "GitHub"
-vault = "Private"
-
-[[ssh-keys]]
-item = "Git Signing"
+item = "Personal"
 vault = "Private"

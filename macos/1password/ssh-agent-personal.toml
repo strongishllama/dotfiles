@@ -1,7 +1,3 @@
 [[ssh-keys]]
-item = "GitHub"
-vault = "Private"
-
-[[ssh-keys]]
-item = "Git Signing"
+item = "Personal"
 vault = "Private"

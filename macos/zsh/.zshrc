@@ -90,6 +90,10 @@ export NVM_DIR="$HOME/.nvm"
 # mise
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 
+# golang
+export PATH="$HOME/go/bin:$PATH"
+export GOBIN="$HOME/bin"
+
 # Aliases
 alias ls='ls --color'
 alias bat="bat --paging=never"
@@ -110,7 +114,6 @@ alias glmr="glab mr create --assignee @me --fill --push --remove-source-branch"
 
 # Paths
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
 eval "$(direnv hook zsh)"
