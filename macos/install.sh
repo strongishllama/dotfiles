@@ -38,6 +38,7 @@ ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
 
 # Create SSH symlinks.
 ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
+ln -sf "$BASE_URL/ssh/allowed_signers" "$HOME/.ssh/allowed_signers"
 
 # Create 1Password symlinks.
 ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" "$HOME/.config/1Password/ssh/agent.toml"
