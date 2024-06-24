@@ -63,8 +63,8 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-# 1Password
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+# SSH
+export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 
 # direnv
 eval "$(direnv hook zsh)"

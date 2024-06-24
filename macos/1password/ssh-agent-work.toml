@@ -1,8 +1,0 @@
-[[ssh-keys]]
-item = "Work"
-vault = "Private"
-account = "gitlab"
-
-[[ssh-keys]]
-item = "Personal"
-vault = "Private"

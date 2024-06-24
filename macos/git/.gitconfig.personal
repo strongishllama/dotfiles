@@ -1,3 +1,5 @@
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [user]
 	email = gitlab.saucy919@passmail.net
   	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICvBsi0zil2oUWCgJ/jp3usAQmUYVeTtU15QunQBH14P

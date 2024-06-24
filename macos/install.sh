@@ -41,10 +41,13 @@ ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
 ln -sf "$BASE_URL/ssh/allowed_signers" "$HOME/.ssh/allowed_signers"
 
 # Create 1Password symlinks.
-ln -sf "$BASE_URL/1password/ssh-agent-$1.toml" "$HOME/.config/1Password/ssh/agent.toml"
+ln -sf "$BASE_URL/1password/ssh-agent.toml" "$HOME/.config/1Password/ssh/agent.toml"
 
 # Create Neovim symlinks.
 ln -sf "$BASE_URL/nvim" "$HOME/.config/nvim"
+
+# Create direnv symlinks.
+ln -sf "$BASE_URL/direnv/direnv.toml" "$HOME/.config/direnv/direnv.toml"
 
 # Add Cronjobs.
 crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id.sh"; } | crontab -

@@ -20,10 +20,4 @@ Host *.gitlab-*.internal
 
 ## General config
 Host *
-  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
-
-Host GitLabPersonal
-  HostName gitlab.com
-  User git
-  IdentityFile ~/Developer/personal/dotfiles/macos/ssh/id_ed25519_personal.pub
-  IdentitiesOnly yes
+  IdentityAgent $SSH_AUTH_SOCK

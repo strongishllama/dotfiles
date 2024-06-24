@@ -1,3 +1,4 @@
 [user]
 	email = tmillhouse@gitlab.com
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGuywwTFZMzj1Jq32GSpO3eEKd/fu8Z4zphVws4rtjH2
+	# Could not get this working without passing the key path and not the key value itself ¯\_(ツ)_/¯
+	signingkey = ~/Developer/personal/dotfiles/macos/ssh/id_ecdsa_work.pub
