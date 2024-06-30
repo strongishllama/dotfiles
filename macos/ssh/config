@@ -27,3 +27,9 @@ Host gitlab.personal.com
   User git
   IdentityFile ~/Developer/personal/dotfiles/macos/ssh/id_ed25519_personal.pub
   IdentitiesOnly yes
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/Developer/personal/dotfiles/macos/ssh/id_ed25519_personal.pub
+  IdentitiesOnly yes
