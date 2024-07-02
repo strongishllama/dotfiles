@@ -2,10 +2,17 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
+tap "jandedobbeleer/oh-my-posh"
 tap "minio/stable"
 tap "romkatv/powerlevel10k"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -18,6 +25,8 @@ brew "checkov"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Validate and define text-based and dynamic configuration
+brew "cue"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Debugger for the Go programming language
@@ -32,6 +41,8 @@ brew "docutils"
 brew "dpkg"
 # Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -82,12 +93,16 @@ brew "mage"
 brew "mailhog"
 # Mac App Store command-line interface
 brew "mas"
+# CLI for interacting with Grafana Mimir
+brew "mimirtool"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Tools and libraries for smart cards
+brew "opensc"
 # OpenBSD freely-licensed SSH connectivity tools
 brew "openssh"
 # Cryptography and SSL/TLS Toolkit
@@ -108,6 +123,8 @@ brew "qemu"
 brew "re2"
 # Persistent key-value database, with built-in net interface
 brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Install various Ruby versions and implementations
 brew "ruby-build"
 # Collection of tools for managing UNIX services
@@ -126,16 +143,26 @@ brew "trash"
 brew "virtualenv"
 # Internet file retriever
 brew "wget"
+# Extensible command-line tool to format YAML files
+brew "yamlfmt"
 # Linter for YAML files
 brew "yamllint"
 # JavaScript package manager
 brew "yarn"
+# Tool for managing your YubiKey configuration
+brew "ykman"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
+# Seamless ssh-agent for YubiKeys and other PIV tokens
+brew "yubikey-agent", restart_service: true
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Vault
 brew "hashicorp/tap/vault"
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 # High Performance Object Storage compatible with Amazon S3 API
 brew "minio/stable/minio"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
 # Chromium based browser
@@ -150,8 +177,8 @@ cask "discord"
 cask "docker"
 # Open source container development tool
 cask "finch"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
+cask "font-hack-nerd-font"
 # Free and open-source image editor
 cask "gimp"
 # Set of tools to manage resources and applications hosted on Google Cloud
@@ -160,14 +187,10 @@ cask "google-cloud-sdk"
 cask "httpie"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# ZSA keyboard firmware flasher
-cask "keymapp"
 # Kubernetes IDE
 cask "lens"
 # Software for Logitech devices
 cask "logi-options-plus"
-# Optimise your webcam, headset, and Logi Dock for video meetings
-cask "logitune"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Open-source software for live streaming and screen recording
@@ -180,6 +203,8 @@ cask "podman-desktop"
 cask "raspberry-pi-imager"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Music streaming service
+cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
 # Multiplayer code editor
@@ -197,12 +222,12 @@ mas "Time Out", id: 402592703
 mas "Xcode", id: 497799835
 vscode "a-h.templ"
 vscode "albert.tabout"
+vscode "asdine.cue"
 vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
 vscode "github.github-vscode-theme"
-vscode "github.vscode-github-actions"
 vscode "gitlab.gitlab-workflow"
 vscode "gitpod.gitpod-desktop"
 vscode "golang.go"
@@ -210,6 +235,7 @@ vscode "grafana.vscode-jsonnet"
 vscode "hashicorp.hcl"
 vscode "hashicorp.terraform"
 vscode "jinliming2.vscode-go-template"
+vscode "koichisasada.vscode-rdbg"
 vscode "mikestead.dotenv"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
@@ -219,11 +245,16 @@ vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "redhat.ansible"
 vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
+vscode "shopify.ruby-extensions-pack"
+vscode "shopify.ruby-lsp"
+vscode "sorbet.sorbet-vscode-extension"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tamasfe.even-better-toml"
 vscode "timonwong.shellcheck"
+vscode "ventura.prom"
 vscode "vue.volar"
 vscode "waderyan.gitblame"
 vscode "zxh404.vscode-proto3"

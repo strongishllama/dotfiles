@@ -15,6 +15,7 @@ mkdir -p "$HOME/.nvm"
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.config/1Password/ssh"
 mkdir -p "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/oh-my-posh"
 mkdir -p "$HOME/Developer/personal"
 if [ "$1" == "work" ]; then
     mkdir -p "$HOME/Developer/work"
@@ -32,9 +33,13 @@ if [ "$1" == "work" ]; then
     ln -sf "$BASE_URL/git/.gitconfig.work" "$HOME/Developer/work/.gitconfig"
 fi
 ln -sf "$BASE_URL/git/.gitignore_global" "$HOME/.gitignore_global"
-ln -sf "$BASE_URL/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+
+# Create zsh symlinks.
 ln -sf "$BASE_URL/zsh/.zprofile" "$HOME/.zprofile"
 ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
+
+# Create oh-my-posh symlinks.
+ln -sf "$BASE_URL/oh-my-posh/config.toml" "$HOME/.config/oh-my-posh/config.toml"
 
 # Create SSH symlinks.
 ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
