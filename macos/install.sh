@@ -15,7 +15,6 @@ mkdir -p "$HOME/.nvm"
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.config/1Password/ssh"
 mkdir -p "$HOME/.config/nvim"
-mkdir -p "$HOME/.config/oh-my-posh"
 mkdir -p "$HOME/Developer/personal"
 if [ "$1" == "work" ]; then
     mkdir -p "$HOME/Developer/work"
@@ -39,7 +38,10 @@ ln -sf "$BASE_URL/zsh/.zprofile" "$HOME/.zprofile"
 ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
 
 # Create oh-my-posh symlinks.
-ln -sf "$BASE_URL/oh-my-posh/config.toml" "$HOME/.config/oh-my-posh/config.toml"
+ln -sf "$BASE_URL/oh-my-posh" "$HOME/.config"
+
+# Create tmux symlinks.
+ln -sf "$BASE_URL/tmux" "$HOME/.config"
 
 # Create SSH symlinks.
 ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
@@ -49,10 +51,10 @@ ln -sf "$BASE_URL/ssh/allowed_signers" "$HOME/.ssh/allowed_signers"
 ln -sf "$BASE_URL/1password/ssh-agent.toml" "$HOME/.config/1Password/ssh/agent.toml"
 
 # Create Neovim symlinks.
-ln -sf "$BASE_URL/nvim" "$HOME/.config/nvim"
+ln -sf "$BASE_URL/nvim" "$HOME/.config"
 
 # Create direnv symlinks.
-ln -sf "$BASE_URL/direnv/direnv.toml" "$HOME/.config/direnv/direnv.toml"
+ln -sf "$BASE_URL/direnv" "$HOME/.config"
 
 # Add Cronjobs.
 crontab -r; crontab -l | { cat; echo "@reboot $HOME/scripts/enable-sudo-touch-id.sh"; } | crontab -
