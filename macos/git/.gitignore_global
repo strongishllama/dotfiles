@@ -1,6 +1,9 @@
 # Generated credentials from google-github-actions/auth.
 **/gha-creds-*.json
 
+# Other credential files.
+.envrc
+
 # General
 **/.DS_Store
 .AppleDouble

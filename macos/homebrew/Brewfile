@@ -79,6 +79,8 @@ brew "hugo"
 brew "icu4c"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Utility to create k3s clusters on any local or remote VM
+brew "k3sup"
 # Run local Kubernetes cluster in Docker
 brew "kind"
 # Kubernetes command-line interface
@@ -221,7 +223,6 @@ mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Tailscale", id: 1475387142
-mas "Time Out", id: 402592703
 mas "Xcode", id: 497799835
 vscode "a-h.templ"
 vscode "albert.tabout"
