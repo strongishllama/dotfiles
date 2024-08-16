@@ -15,6 +15,7 @@ mkdir -p "$HOME/.nvm"
 mkdir -p "$HOME/.ssh"
 mkdir -p "$HOME/.config/1Password/ssh"
 mkdir -p "$HOME/.config/nvim"
+mkdir -p "$HOME/.config/tmux"
 mkdir -p "$HOME/Developer/personal"
 if [ "$1" == "work" ]; then
     mkdir -p "$HOME/Developer/work"
@@ -41,7 +42,7 @@ ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
 ln -sf "$BASE_URL/oh-my-posh" "$HOME/.config"
 
 # Create tmux symlinks.
-ln -sf "$BASE_URL/tmux" "$HOME/.config"
+ln -sf "$BASE_URL/tmux/tmux.conf" "$HOME/.config/tmux/tmux.conf"
 
 # Create SSH symlinks.
 ln -sf "$BASE_URL/ssh/config" "$HOME/.ssh/config"
