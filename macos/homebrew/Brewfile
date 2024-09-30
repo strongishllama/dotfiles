@@ -11,6 +11,8 @@ brew "actionlint"
 brew "ansible"
 # Checks ansible playbooks for practices and behaviour
 brew "ansible-lint"
+# New file format for still image compression
+brew "jpeg-xl"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Official Amazon AWS command-line interface
@@ -61,8 +63,6 @@ brew "gnupg"
 brew "golangci-lint"
 # Library access to GnuPG
 brew "gpgme"
-# New file format for still image compression
-brew "jpeg-xl"
 # Image processing tools collection
 brew "graphicsmagick"
 # Smarter Dockerfile linter to validate best practices
@@ -194,7 +194,7 @@ cask "iterm2"
 # Kubernetes IDE
 cask "lens"
 # Software for Logitech devices
-cask "logi-options-plus"
+cask "logi-options+"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Open-source software for live streaming and screen recording
@@ -228,10 +228,11 @@ vscode "a-h.templ"
 vscode "albert.tabout"
 vscode "asdine.cue"
 vscode "bradlc.vscode-tailwindcss"
+vscode "catppuccin.catppuccin-vsc"
+vscode "catppuccin.catppuccin-vsc-icons"
 vscode "charliermarsh.ruff"
 vscode "esbenp.prettier-vscode"
 vscode "exiasr.hadolint"
-vscode "github.github-vscode-theme"
 vscode "gitlab.gitlab-workflow"
 vscode "gitpod.gitpod-desktop"
 vscode "golang.go"
