@@ -13,3 +13,10 @@ A backup of various configuration and settings files.
 1. Download repository
 1. Change into `macos` directory
 1. Run the `install.sh` script
+
+# Yubikeys
+
+If you need to switch to the backup Yubikey you'll need to update the [work gitconfig](macos/git/.gitconfig.work) to the following.
+```sh
+signingkey = ~/Developer/personal/dotfiles/macos/ssh/id_ecdsa_work_backup.pub
+```
