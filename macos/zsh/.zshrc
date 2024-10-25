@@ -101,7 +101,7 @@ alias gco="bash \"$HOME/scripts/git-checkout.sh\""
 alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
 alias gstu="git status --untracked-files"
 alias ghpr="gh pr create --draft --assignee @me"
-alias glmr="glab mr create --assignee @me --fill --push --remove-source-branch"
+alias glmr="glab mr create --assignee @me --fill --push --remove-source-branch --yes"
 
 # Paths
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
