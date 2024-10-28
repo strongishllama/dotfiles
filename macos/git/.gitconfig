@@ -1,7 +1,6 @@
 [commit]
 	gpgsign = true
 [core]
-	editor = code --wait
 	excludesfile = ~/.gitignore_global
 [diff]
     external = difft
