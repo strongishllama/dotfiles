@@ -21,11 +21,8 @@ if [[ "$BRANCH" = "" ]]; then
     exit 1
 fi
 
-# If branch name starts with 'remotes/' then it is a remote branch. By
-# using --track and a remote branch name, it is the same as:
-# git checkout -b branchName --track origin/branchName
 if [[ "$BRANCH" = 'remotes/'* ]]; then
-    git checkout --track "$BRANCH"
+    git switch --track "$BRANCH"
 else
-    git checkout "$BRANCH";
+    git switch "$BRANCH";
 fi
