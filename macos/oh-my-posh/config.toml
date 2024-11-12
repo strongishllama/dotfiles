@@ -1,8 +1,16 @@
-#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
-
-version = 2
-final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+  template = '❯❯ '
+  foreground = 'magenta'
+  background = 'transparent'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
 
 [[blocks]]
   type = 'prompt'
@@ -10,21 +18,21 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'path'
     style = 'plain'
-    background = 'trasparent'
-    foreground = 'blue'
     template = '{{ .Path }}'
+    foreground = 'blue'
+    background = 'trasparent'
+    type = 'path'
 
     [blocks.segments.properties]
       style = 'full'
 
   [[blocks.segments]]
-    type = 'git'
     style = 'plain'
-    background = 'transparent'
-    foreground = '#6c6c6c'
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = '#6c6c6c'
+    background = 'transparent'
+    type = 'git'
 
     [blocks.segments.properties]
       branch_icon = ''
@@ -37,54 +45,30 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
-    type = 'text'
     style = 'plain'
-    background = 'trasparent'
-    foreground_templates = [
-      '{{if gt .Code 0}}red{{end}}',
-      '{{if eq .Code 0}}magenta{{end}}',
-    ]
     template = '❯'
-
-[[tooltips]]
-  type = 'kubectl'
-  tips = [
-    'kubectl',
-    'k',
-    'helm',
-    'kubens',
-    'kubectx',
-    'k9s',
-    'helmfile',
-  ]
-  style = 'plain'
-  background = 'transparent'
-  foreground = 'green'
-  template = '{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}'
+    background = 'trasparent'
+    type = 'text'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
 
 [[blocks]]
   type = 'rprompt'
   overflow = 'hidden'
 
   [[blocks.segments]]
-    type = 'executiontime'
     style = 'plain'
+    template = '{{ .FormattedMs }}'
     foreground = 'yellow'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    type = 'executiontime'
 
     [blocks.segments.properties]
       threshold = 2000
 
-[transient_prompt]
+[[tooltips]]
+  style = 'plain'
+  template = '{{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}'
+  foreground = 'green'
   background = 'transparent'
-  foreground_templates = [
-    '{{if gt .Code 0}}red{{end}}',
-    '{{if eq .Code 0}}magenta{{end}}',
-  ]
-  template = '❯ '
-
-[secondary_prompt]
-  foreground = 'magenta'
-  background = 'transparent'
-  template = '❯❯ '
+  type = 'kubectl'
+  tips = ['kubectl', 'k', 'helm', 'kubens', 'kubectx', 'k9s', 'helmfile']

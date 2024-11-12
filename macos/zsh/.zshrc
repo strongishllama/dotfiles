@@ -90,7 +90,7 @@ export GOBIN="$HOME/bin"
 # Aliases
 alias ls='ls --color'
 alias bat="bat --paging=never"
-alias nv="nvim"
+alias n="nvim"
 alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
