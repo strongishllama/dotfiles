@@ -34,9 +34,8 @@ if [ "$1" == "work" ]; then
 fi
 ln -sf "$BASE_URL/git/.gitignore_global" "$HOME/.gitignore_global"
 
-# Create zsh symlinks.
-ln -sf "$BASE_URL/zsh/.zprofile" "$HOME/.zprofile"
-ln -sf "$BASE_URL/zsh/.zshrc" "$HOME/.zshrc"
+# Compile zsh files.
+"$HOME/scripts/compile.sh"
 
 # Create oh-my-posh symlinks.
 ln -sf "$BASE_URL/oh-my-posh" "$HOME/.config"

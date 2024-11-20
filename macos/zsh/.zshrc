@@ -13,7 +13,17 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 # Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -27,7 +37,18 @@ zinit snippet OMZP::kubectl
 zinit snippet OMZP::kubectx
 
 # Load completions
-autoload -Uz compinit && compinit
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+export PATH=/opt/homebrew/bin:$PATH
+
+autoload -Uz compinit
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(N.mh+24) ]]; then
+  compinit -C
+else
+  compinit
+fi
+
 zinit cdreplay -q
 
 # Keybindings
@@ -58,7 +79,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # tmux
 export XDG_CONFIG_HOME="$HOME/.config"
 
-
 # SSH
 export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 
@@ -68,15 +88,6 @@ eval "$(direnv hook zsh)"
 # gcloud
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-# Homebrew
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-export PATH=/opt/homebrew/bin:$PATH
 
 # golang
 export PATH="$HOME/go/bin:$PATH"
@@ -107,3 +118,4 @@ eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
