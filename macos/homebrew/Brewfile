@@ -4,7 +4,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jandedobbeleer/oh-my-posh"
 tap "minio/stable"
-tap "romkatv/powerlevel10k"
 # Static checker for GitHub Actions workflow files
 brew "actionlint"
 # New file format for still image compression
