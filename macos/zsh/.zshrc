@@ -107,13 +107,13 @@ alias gs="bash \"$HOME/scripts/git-switch.sh\""
 alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --tags"
 alias gstu="git status --untracked-files"
 alias ghpr="gh pr create --draft --assignee @me"
-alias gd="bash \"$HOME/scripts/git-diff.sh\""
 alias glmr="bash \"$HOME/scripts/glab-mr-create.sh\""
 
 # Paths
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
+eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
 eval "$(/opt/homebrew/bin/mise activate zsh)"

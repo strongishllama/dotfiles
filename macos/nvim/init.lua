@@ -621,7 +621,6 @@ require("lazy").setup({
 					settings = {
 						gopls = {
 							analyses = {
-								shadow = true,
 								unusedvariable = true,
 								useany = true,
 							},
@@ -670,8 +669,9 @@ require("lazy").setup({
 			-- for you, so that they are available from within Neovim.
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
-				"goimports-reviser",
+				"goimports",
 				"gopls",
+				"jsonnet_ls",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
@@ -724,7 +724,7 @@ require("lazy").setup({
 				}
 			end,
 			formatters_by_ft = {
-				go = { "goimports-reviser" },
+				go = { "goimports" },
 				lua = { "stylua" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
@@ -935,6 +935,22 @@ require("lazy").setup({
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
+		{
+			"windwp/nvim-autopairs",
+			event = "InsertEnter",
+			-- Optional dependency
+			dependencies = { "hrsh7th/nvim-cmp" },
+			config = function()
+				require("nvim-autopairs").setup({})
+				-- If you want to automatically add `(` after selecting a function or method
+				local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+				local cmp = require("cmp")
+				cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+			end,
+		},
+		{
+			"google/vim-jsonnet",
+		},
 		-- There are additional nvim-treesitter modules that you can use to interact
 		-- with nvim-treesitter. You should go explore a few and see what interests you:
 		--
@@ -955,7 +971,6 @@ require("lazy").setup({
 	-- require 'kickstart.plugins.debug',
 	-- require 'kickstart.plugins.indent_line',
 	-- require 'kickstart.plugins.lint',
-	-- require 'kickstart.plugins.autopairs',
 	-- require 'kickstart.plugins.neo-tree',
 	-- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
