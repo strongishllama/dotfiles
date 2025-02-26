@@ -93,6 +93,13 @@ vim.g.maplocalleader = " "
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Set custom file types
+vim.filetype.add({
+	extension = {
+		mdx = "markdown",
+	},
+})
+
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -154,6 +161,14 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+
+-- Set the cursor mode back to bar when quitting.
+vim.api.nvim_create_autocmd("VimLeave", {
+	callback = function()
+		vim.o.guicursor = "a:ver25"
+		io.write("\027[6 q")
+	end,
+})
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -626,7 +641,6 @@ require("lazy").setup({
 							},
 							gofumpt = true,
 							staticcheck = true,
-							usePlaceholders = true,
 						},
 					},
 				},
@@ -640,7 +654,6 @@ require("lazy").setup({
 				-- But for many setups, the LSP (`ts_ls`) will work just fine
 				-- ts_ls = {},
 				--
-
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
@@ -655,8 +668,17 @@ require("lazy").setup({
 						},
 					},
 				},
+				terraformls = {},
+				harper_ls = {
+					settings = {
+						["harper-ls"] = {
+							markdown = {
+								ignore_link_title = true,
+							},
+						},
+					},
+				},
 			}
-
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
 			--  other tools, you can run
@@ -914,12 +936,14 @@ require("lazy").setup({
 				"bash",
 				"c",
 				"diff",
+				"hcl",
 				"html",
 				"lua",
 				"luadoc",
 				"markdown",
 				"markdown_inline",
 				"query",
+				"terraform",
 				"vim",
 				"vimdoc",
 			},

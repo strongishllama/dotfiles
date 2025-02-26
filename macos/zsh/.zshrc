@@ -56,6 +56,9 @@ bindkey '^f' autosuggest-accept
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
+# Set cursor to bar mode.
+echo -ne '\e[6 q'
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -100,6 +103,7 @@ alias n="nvim"
 alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 alias tf="terraform"
+alias docker="podman"
 
 alias gbd="bash \"$HOME/scripts/git-branch-delete.sh\""
 alias gsmdb="bash \"$HOME/scripts/git-switch-main-delete-branch.sh\""

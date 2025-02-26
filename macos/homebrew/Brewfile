@@ -108,6 +108,8 @@ brew "openssh"
 brew "openssl@1.1"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Tool for managing OCI containers and pods
+brew "podman"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Alternative to backtracking PCRE-style regular expression engines
@@ -162,8 +164,12 @@ cask "clocker"
 cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker"
+# Web browser
+cask "firefox@developer-edition"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
 # Set of tools to manage resources and applications hosted on Google Cloud
@@ -184,6 +190,8 @@ cask "obs"
 cask "obsidian"
 # Imaging utility to install operating systems to a microSD card
 cask "raspberry-pi-imager"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Music streaming service
@@ -194,7 +202,6 @@ cask "visual-studio-code"
 cask "zed"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Clocker", id: 1056643111
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keymapp", id: 6472865291
