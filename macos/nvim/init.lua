@@ -622,6 +622,18 @@ require("lazy").setup({
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
+			-- Load local config if it exists.
+			local jpaths = {}
+			local ok, local_config = pcall(function()
+				return dofile(os.getenv("XDG_CONFIG_HOME") .. "/nvim-local/init.lua")
+			end)
+
+			if ok then
+				jpaths = local_config.jpaths
+			else
+				print("Failed to load local config: " .. tostring(local_config))
+			end
+
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 			--
@@ -642,6 +654,11 @@ require("lazy").setup({
 							gofumpt = true,
 							staticcheck = true,
 						},
+					},
+				},
+				jsonnet_ls = {
+					settings = {
+						jpath = jpaths,
 					},
 				},
 				-- pyright = {},
@@ -678,6 +695,18 @@ require("lazy").setup({
 						},
 					},
 				},
+				yamlls = {
+					settings = {
+						yaml = {
+							format = {
+								enable = true,
+							},
+							schemaStore = {
+								enable = true,
+							},
+						},
+					},
+				},
 			}
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
@@ -692,7 +721,6 @@ require("lazy").setup({
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				"goimports",
-				"jsonnet_ls",
 				"stylua",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
