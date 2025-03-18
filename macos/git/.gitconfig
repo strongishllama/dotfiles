@@ -1,24 +1,34 @@
+[branch]
+	sort = -committerdate
 [commit]
 	gpgsign = true
 [core]
 	excludesfile = ~/.gitignore_global
 [diff]
-    external = difft
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[fetch]
+	all = true
+	prune = true
+	pruneTags = true
 [gpg]
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
 [includeIf "gitdir:~/Developer/personal/**"]
-    path = ~/Developer/personal/.gitconfig
+	path = ~/Developer/personal/.gitconfig
 [includeIf "gitdir:~/Developer/work/**"]
-    path = ~/Developer/work/.gitconfig
+	path = ~/Developer/work/.gitconfig
 [init]
 	defaultBranch = main
 [pager]
-    difftool = true
+	difftool = true
 [push]
 	autoSetupRemote = true
-# [url "git@github.com:"]
-	# insteadOf = https://github.com/
+	followTags = true
+[tag]
+	sort = version:refname
 [user]
 	name = Taliesin Millhouse
