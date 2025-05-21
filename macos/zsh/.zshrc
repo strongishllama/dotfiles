@@ -96,6 +96,9 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 export PATH="$HOME/go/bin:$PATH"
 export GOBIN="$HOME/bin"
 
+# docker
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+
 # Aliases
 alias ls='ls --color'
 alias bat="bat --paging=never"
