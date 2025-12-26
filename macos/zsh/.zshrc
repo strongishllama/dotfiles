@@ -105,7 +105,7 @@ alias bat="bat --paging=never"
 alias n="nvim"
 alias rm="echo \"use 'trash' to trash it, or the full path '/bin/rm' if you want to permanently delete it\""
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
-alias tf="terraform"
+alias tf="tofu"
 
 alias gbd="bash \"$HOME/scripts/git-branch-delete.sh\""
 alias gsmdb="bash \"$HOME/scripts/git-switch-main-delete-branch.sh\""
@@ -118,6 +118,7 @@ alias glmr="bash \"$HOME/scripts/glab-mr-create.sh\""
 # Paths
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 eval $(thefuck --alias)
 eval "$(direnv hook zsh)"
