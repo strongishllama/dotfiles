@@ -114,6 +114,7 @@ alias gprune="git fetch --prune && git tag -l | xargs git tag -d && git fetch --
 alias gstu="git status --untracked-files"
 alias ghpr="gh pr create --draft --assignee @me"
 alias glmr="bash \"$HOME/scripts/glab-mr-create.sh\""
+alias opc="bash \"$HOME/scripts/onepassword-check-account.sh\""
 
 # Paths
 export PATH="$(brew --prefix)/opt/postgresql@13/bin:$PATH"
