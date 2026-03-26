@@ -99,6 +99,27 @@ export GOBIN="$HOME/bin"
 # docker
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
 
+# android
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+
+# gx: smart branch/commit generation (overrides OMZ gcb/gcmsg aliases)
+function gcb() {
+  if [[ $# -eq 0 ]]; then
+    gx branch
+  else
+    git checkout -b "$@"
+  fi
+}
+function gcmsg() {
+  if [[ $# -eq 0 ]]; then
+    gx commit
+  else
+    git commit --message "$@"
+  fi
+}
+
 # Aliases
 alias ls='ls --color'
 alias bat="bat --paging=never"
